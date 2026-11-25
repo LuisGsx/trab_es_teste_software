@@ -62,6 +62,7 @@ Regra: retirada + prazo do tipo; se cair num domingo, passa para a segunda segui
 | DD-C1 | Calendário: domingo no fim do mês | 2027-01-17 | ALUNO | 2027-02-01 | `DataDevolucaoTest.ajusteAtravessaCalendario` |
 | DD-C2 | Calendário: domingo no fim do ano | 2028-12-17 | ALUNO | 2029-01-01 | `DataDevolucaoTest.ajusteAtravessaCalendario` |
 | DD-C3 | Calendário: domingo em 29/fev (bissexto) | 2032-02-15 | ALUNO | 2032-03-01 | `DataDevolucaoTest.ajusteAtravessaCalendario` |
+| DD-L10 | Retirada em domingo, resultado em dia útil (PROFESSOR) | 2026-11-01 | PROFESSOR | 2026-12-01 | `DataDevolucaoTest.retiradaEmDomingoNaoAjusta` |
 
 ---
 
@@ -218,6 +219,8 @@ Regra da especificação:
 | VL-PR-12 | Reserva isolada (possuiReserva = true) | ALUNO | (0, true, false) | false | `podeRenovar_reservaIsolada_impede` |
 | VL-PR-13 | Atraso isolado (emAtraso = true) | ALUNO | (0, false, true) | false | `podeRenovar_atrasoIsolado_impede` |
 | VL-PR-14 | Reserva e atraso juntos | ALUNO | (0, true, true) | false | `podeRenovar_reservaEAtrasoJuntos_impede` |
+| VL-PR-15 | Reserva isolada, PROFESSOR | PROFESSOR | (0, true, false) | false | `podeRenovar_professor_reservaIsolada_impede` |
+| VL-PR-16 | Atraso isolado, PROFESSOR | PROFESSOR | (0, false, true) | false | `podeRenovar_professor_atrasoIsolado_impede` |
 
 ---
 

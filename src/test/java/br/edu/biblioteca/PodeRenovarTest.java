@@ -95,6 +95,20 @@ class PodeRenovarTest {
         // VL-PR-14: Ambas condições de bloqueio ativas
         assertFalse(regras.podeRenovar(TipoUsuario.ALUNO, 0, true, true));
     }
+    
+    // VL-PR-15: Reserva isolada impede renovação de Professor
+    @Test
+    @DisplayName("Reserva isolada (true) impede renovação de Professor")
+    void podeRenovar_professor_reservaIsolada_impede() {
+        assertFalse(regras.podeRenovar(TipoUsuario.PROFESSOR, 0, true, false));
+    }
+ 
+    // VL-PR-16: Atraso isolado impede renovação de Professor
+    @Test
+    @DisplayName("Atraso isolado (true) impede renovação de Professor")
+    void podeRenovar_professor_atrasoIsolado_impede() {
+        assertFalse(regras.podeRenovar(TipoUsuario.PROFESSOR, 0, false, true));
+    }
 
     private void assertEqualsBool(boolean esperado, boolean obtido) {
         if (esperado) {

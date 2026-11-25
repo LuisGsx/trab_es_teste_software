@@ -73,6 +73,13 @@ class DataDevolucaoTest {
         verifica(retirada, tipo, esperada);
     }
 
+    // DD-L10: retirada em domingo, resultado em dia útil (30 dias do professor)
+    @Test
+    void retiradaEmDomingoNaoAjusta() {
+        // 2026-11-01 (dom) + 30 = 2026-12-01 (ter)
+        verifica("2026-11-01", TipoUsuario.PROFESSOR, "2026-12-01");
+    }
+
     // DD-I1
     @Test
     void tipoNuloLancaExcecao() {

@@ -18,5 +18,3 @@
 - Inicialmente, em uma rodada intermediária, alguns testes de `multaTotalCentavos` foram gerados com valores arbitrários que não cobriam as fronteiras críticas especificadas no checklist do professor (como o teste de `[1, 2, 12]`, elemento negativo no início, meio e fim, e a distinção clara entre teto individual de 5000 e teto global de 10000). A equipe solicitou a refatoração para garantir a exata aderência ao checklist.
 - Corrigimos o plano de testes para separar explicitamente as tabelas de Classes de Equivalência e as tabelas de Valores-Limite para cada um dos quatro métodos, alinhando ao formato padrão exigido.
 - Reforçamos os nomes dos métodos de teste para que fossem autodescritivos e incluíssem anotações explícitas e comentários com o ID exato da tabela do plano de testes.
-
-[PREENCHER PELA EQUIPE: conferência manual de cada valor esperado frente ao PDF do Anexo A e ensaio das justificativas para a arguição oral sorteada].
